@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "GeneralSans-Light";
+	src: url("./fonts/GeneralSans-Light.woff") format("woff");
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GeneralSans-Regular";
+	src: url("./fonts/GeneralSans-Regular.woff") format("woff");
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GeneralSans-Medium";
+	src: url("./fonts/GeneralSans-Medium.woff") format("woff");
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GeneralSans-Semibold";
+	src: url("./fonts/GeneralSans-Semibold.woff") format("woff");
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GeneralSans-Bold";
+	src: url("./fonts/GeneralSans-Bold.woff") format("woff");
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+}
+
+:root {
+	--primary-color: #ef2c5a;
+	--primary-hover: #ef2c59a4;
+	--black-base: #000000;
+	--black-pimary: #0a0a0a;
+	--black-secondary: #1a1a1a;
+	--gray-light: #f7f7f7;
+	--gray-light-primary: #e8e8e8;
+	--gray-light-secondary: #f4f4f4;
+	--gray-pimary: #484848;
+	--gray-primary-light: #f0f0f0;
+	--gray-secondary: #5f5f5f;
+	--gray-base: #8d8d8d;
+	--gray-base-primary: #a39d9e;
+	--gray-base-secondary: #565c69;
+	--sidebar-bg: #fffbf7;
+	--header-bg: #ededed;
+}
+
+*::-webkit-scrollbar {
+	width: 10px;
+	width: 10px;
+}
+*::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background-color: #dfe9eb;
+}
+
+*::-webkit-scrollbar-track:hover {
+	background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-track:active {
+	background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #ef2c59a4;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #ef2c59ca;
+}
+
+*::-webkit-scrollbar-thumb:active {
+	background-color: #ef2c59ea;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
