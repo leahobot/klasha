@@ -1,0 +1,141 @@
+{
+	"summary": [
+		{
+			"todaySales": "1,652.50",
+			"weekSales": "2,652.50",
+			"monthSales": "6,652.50",
+			"prevMonthSales": "10,652.50"
+		}
+	],
+
+	"results": [
+		{
+			"date": "20 Aug",
+			"amount": "1500"
+		},
+		{
+			"date": "21 Aug",
+			"amount": "2100"
+		},
+		{
+			"date": "22 Aug",
+			"amount": "2200"
+		},
+		{
+			"date": "23 Aug",
+			"amount": "1800"
+		},
+		{
+			"date": "24 Aug",
+			"amount": "1600"
+		},
+		{
+			"date": "25 Aug",
+			"amount": "1900"
+		},
+		{
+			"date": "26 Aug",
+			"amount": "2600"
+		},
+		{
+			"date": "27 Aug",
+			"amount": "2300"
+		},
+		{
+			"date": "28 Aug",
+			"amount": "1300"
+		},
+		{
+			"date": "29 Aug",
+			"amount": "1200"
+		},
+		{
+			"date": "30 Aug",
+			"amount": "1700"
+		},
+		{
+			"date": "31 Aug",
+			"amount": "2900"
+		},
+		{
+			"date": "01 Sept",
+			"amount": "3000"
+		},
+		{
+			"date": "02 Sept",
+			"amount": "3200"
+		},
+		{
+			"date": "03 Sept",
+			"amount": "4000"
+		},
+		{
+			"date": "04 Sept",
+			"amount": "4000"
+		},
+		{
+			"date": "05 Sept",
+			"amount": "2600"
+		},
+		{
+			"date": "06 Sept",
+			"amount": "2400"
+		},
+		{
+			"date": "07 Sept",
+			"amount": "2800"
+		},
+		{
+			"date": "08 Sept",
+			"amount": "2600"
+		},
+		{
+			"date": "09 Sept",
+			"amount": "2900"
+		},
+		{
+			"date": "10 Sept",
+			"amount": "2500"
+		},
+		{
+			"date": "11 Sept",
+			"amount": "2500"
+		},
+		{
+			"date": "12 Sept",
+			"amount": "2200"
+		},
+		{
+			"date": "13 Sept",
+			"amount": "1500"
+		},
+		{
+			"date": "14 Sept",
+			"amount": "1200"
+		},
+		{
+			"date": "15 Sept",
+			"amount": "1600"
+		},
+		{
+			"date": "16 Sept",
+			"amount": "1600"
+		},
+		{
+			"date": "17 Sept",
+			"amount": "2000"
+		},
+		{
+			"date": "18 Sept",
+			"amount": "2100"
+		},
+		{
+			"date": "19 Sept",
+			"amount": "2200"
+		},
+		{
+			"date": "20 Sept",
+			"amount": "2500"
+		}
+	]
+}

@@ -76,7 +76,7 @@ body {
 	--gray-base-primary: #a39d9e;
 	--gray-base-secondary: #565c69;
 	--sidebar-bg: #fffbf7;
-	--header-bg: #ededed;
+	--header-border: #ededed;
 }
 
 *::-webkit-scrollbar {
@@ -107,21 +107,4 @@ body {
 
 *::-webkit-scrollbar-thumb:active {
 	background-color: #ef2c59ea;
-}
-
-.input::-webkit-outer-spin-button,
-.input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
-.scrollbar-hide::-webkit-scrollbar {
-	display: none;
-}
-
-/* For IE, Edge and Firefox */
-.scrollbar-hide {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
 }
