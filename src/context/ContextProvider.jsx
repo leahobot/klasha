@@ -9,6 +9,8 @@ export const ContextProvider = ({ children }) => {
 	const [language, setLanguage] = useState("En");
 	const [currency, setCurrency] = useState("USD");
 	const [searchInput, setSearchInput] = useState("");
+	const [selectStatus, setSelectStatus] = useState("");
+	const [selectName, setSelectName] = useState("");
 
 	return (
 		<StateContext.Provider
@@ -25,6 +27,10 @@ export const ContextProvider = ({ children }) => {
 				setCurrency,
 				searchInput,
 				setSearchInput,
+				selectStatus,
+				setSelectStatus,
+				selectName,
+				setSelectName,
 			}}>
 			{children}
 		</StateContext.Provider>

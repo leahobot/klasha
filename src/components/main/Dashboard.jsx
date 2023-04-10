@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// import XLSX from "sheetjs-style";
+// import * as FileSaver from "file-saver";
 import { useStateContext } from "../../context/ContextProvider";
 import styles from "./Main.module.scss";
 import data from "../../data/dashboardData.json";
@@ -15,18 +17,17 @@ const Dashboard = () => {
 	const [days, setDays] = useState(7);
 	const { currency } = useStateContext();
 
-	// const handleDownload = async (period, file) => {
-	// 	const fileType =
-	// 		"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
-	// 	const fileExtension = ".xlsx";
-
-	// 	const data = period === 7 ? file.weekly_results : file.monthly_results;
-	// 	const ws = XLSX.utils.json_to_sheet(data);
-	// 	const wb = { Sheets: { data: ws }, SheetNames: ["data"] };
-	// 	const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
-	// 	const excelData = new Blob([excelBuffer], { type: fileType });
-	// 	FileSaver.saveAs(excelData, "report" + fileExtension);
-	// };
+	const handleDownload = async (period, file) => {
+		// const fileType =
+		// 	"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
+		// const fileExtension = ".xlsx";
+		// const data = period === 7 ? file.weekly_results : file.monthly_results;
+		// const ws = XLSX.utils.json_to_sheet(data);
+		// const wb = { Sheets: { data: ws }, SheetNames: ["data"] };
+		// const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+		// const excelData = new Blob([excelBuffer], { type: fileType });
+		// FileSaver.saveAs(excelData, "report" + fileExtension);
+	};
 
 	const closeModals = () => {
 		if (currencyModal) {
@@ -120,14 +121,15 @@ const Dashboard = () => {
 						<select
 							value={selectValue}
 							onChange={(e) => setSelectValue(e.target.value)}
-							className="hidden lg:block p-[0.6rem] sm:p-[0.75rem] xl:p-[0.85rem] 2xl:p-[1.1rem] w[20rem] xl:w-[22rem] 2xl:w-[30rem] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10x]">
+							className="hidden lg:block p-[0.6rem] sm:p-[0.75rem] xl:p-[0.85rem] 2xl:p-[1.1rem] w-[33%] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10x]">
 							<option value="">Email</option>
 							<option value="pdf">Download PDF</option>
 							<option value="excel">Download Excel</option>
 							<option value="csv">Download CSV</option>
 						</select>
 
-						<Button>
+						<Button
+							handleOnClick={() => handleDownload(days, data)}>
 							<HiArrowDown className={iconSize} />
 							Download Report
 						</Button>
@@ -157,7 +159,7 @@ const Dashboard = () => {
 
 						<Link
 							to="wire"
-							className="self-start bg-[var(--black-primary)] py-[1rem] sm:py-[1.1rem] xl:py-[1.2rem] 2xl:py-[1.5rem] px-[1.6rem] sm:px-[2rem] xl:px-[2.2rem] 2xl:px-[3rem] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10px] transition-transform duration-300 hover:scale-110">
+							className="self-start bg-[var(--black-primary)] py-[1rem] sm:py-[1.1rem] xl:py-[1.2rem] 2xl:py-[1.5rem] px-[1.6rem] sm:px-[2rem] xl:px-[2.2rem] 2xl:px-[3rem] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10px] transition-transform duration-500 hover:scale-110">
 							Send a Wire
 						</Link>
 					</div>

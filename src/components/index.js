@@ -11,3 +11,4 @@ export { default as Marketing } from "./main/Marketing";
 export { default as Payment } from "./main/Payment";
 export { default as Transactions } from "./main/Transactions";
 export { default as Wire } from "./main/Wire";
+export { default as Pagination } from "./Pagination";
