@@ -4,7 +4,7 @@ import { MdClose } from "react-icons/md";
 import data from "../data/transactions.json";
 
 const style =
-	"absolute flex flex-col items-center p-[1.2rem] sm:p-[1.5rem] 2xl:p-[2rem] gap-[0.3rem] sm:gap-[0.6rem] 2xl:gap-[0.8rem] bg-white list-none shadow-[0_0_15px_rgba(0,0,0,0.08)] text-[1.2rem] sm:text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.8rem] border-[1px] 2xl:border-[1.5px] border-solid border-[var(--header-border)] transition-all duration-400";
+	"absolute flex flex-col items-center p-[1.2rem] sm:p-[1.5rem] 2xl:p-[2rem] gap-[0.3rem] sm:gap-[0.6rem] 2xl:gap-[0.8rem] bg-white list-none shadow-[0_0_15px_rgba(0,0,0,0.08)] text-[1.2rem] sm:text-[1.3rem] xl:text-[1.35rem] 2xl:text-[1.75rem] border-[1px] 2xl:border-[1.5px] border-solid border-[var(--header-border)] transition-all duration-400";
 
 export const UserModal = () => {
 	const { userModal } = useStateContext();
@@ -23,27 +23,28 @@ export const UserModal = () => {
 };
 
 export const LanguageModal = () => {
-	const { languageModal, setLanguage } = useStateContext();
-
-	const languageStyle =
-		"hover:text-[var(--primary-color)] mb-[0.2rem] 2xl:mb-[0.4rem]";
+	const { languageModal, setLanguage, language } = useStateContext();
 
 	return (
 		<ul
 			className={`${style} ${
 				languageModal ? "translate-x-0" : "translate-x-[200%]"
-			} top-[200%] -right-[50%] w-[16rem] sm:w-[17rem] xl:w-[19rem] 2xl:w-[24rem]`}>
+			} top-[200%] -right-[50%] w-[16rem] sm:w-[17rem] xl:w-[19rem] 2xl:w-[24rem] text-[var(--black-primary)]`}>
 			<li className="font-medium mb-[0.5rem] 2xl:mb-[0.8rem]">
 				Choose a Language
 			</li>
 			<li
 				onClick={() => setLanguage("En")}
-				className={languageStyle}>
+				className={`mb-[0.2rem] 2xl:mb-[0.4rem] ${
+					language === "En" ? "text-[var(--primary-color)]" : ""
+				}`}>
 				English
 			</li>
 			<li
 				onClick={() => setLanguage("Fr")}
-				className={languageStyle}>
+				className={`mb-[0.2rem] 2xl:mb-[0.4rem] ${
+					language === "Fr" ? "text-[var(--primary-color)]" : ""
+				}`}>
 				French
 			</li>
 		</ul>
@@ -128,16 +129,16 @@ export const FilterModal = ({ setFilterModal, setFilteredTransactions }) => {
 	};
 
 	const selectStyle =
-		"p-[0.6rem] sm:p-[0.75rem] xl:p-[0.85rem] 2xl:p-[1.1rem] w-full rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10x] border-solid border-[1px] border-gray-300 outline-0 focus:border-gray-400 focus:border-[2px] mb-[1rem]";
+		"p-[0.7rem] sm:p-[0.75rem] xl:p-[0.85rem] 2xl:p-[1.1rem] w-full rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10x] border-solid border-[1px] border-gray-300 outline-0 focus:border-gray-400 focus:border-[2px] mb-[1rem]";
 	return (
 		<div
-			className={`${style} top-[120%] -left-[40%] w-[9rem] sm:w-[17rem] xl:w-[11rem] 2xl:w-[13rem] font-medium`}>
+			className={`${style} top-[120%] -left-[40%] w-[17rem] xl:w-[19rem] 2xl:w-[26rem] font-medium`}>
 			<MdClose
 				onClick={() => setFilterModal(false)}
 				className="text-[1.4rem] xl:text-[1.5rem] 2xl:text-[2rem] self-end cursor-pointer text-gray-500 hover:scale-[1.4] transition-transform duration-300"
 			/>
 			<div>
-				<label className="font-semibold">Filter By Status</label>
+				<label className="font-semibold mb-1">Filter By Status</label>
 				<select
 					value={selectStatus}
 					onChange={(e) => handleFilterStatus(e, pending, successful)}
@@ -152,7 +153,7 @@ export const FilterModal = ({ setFilterModal, setFilteredTransactions }) => {
 				</select>
 			</div>
 			<div>
-				<label className="font-semibold">Filter By Name</label>
+				<label className="font-semibold mb-1">Filter By Name</label>
 				<select
 					value={selectName}
 					onChange={(e) => handleFilterName(e, data?.results)}
@@ -169,8 +170,8 @@ export const FilterModal = ({ setFilterModal, setFilteredTransactions }) => {
 
 			<p
 				onClick={hanldeClearFilters}
-				className="self-start font-semibold cursor-pointer hover:text-[var(--primary-color)]">
-				Clear Filters
+				className="self-start mt-[1rem] xl:mt-[1.2rem] 2xl:mt-[2rem] font-semibold cursor-pointer hover:text-[var(--primary-color)] ">
+				Clear All Filters
 			</p>
 		</div>
 	);

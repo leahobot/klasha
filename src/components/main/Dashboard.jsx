@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import XLSX from "sheetjs-style";
-// import * as FileSaver from "file-saver";
+import * as XLSX from "xlsx";
+import * as FileSaver from "file-saver";
 import { useStateContext } from "../../context/ContextProvider";
 import styles from "./Main.module.scss";
 import data from "../../data/dashboardData.json";
@@ -17,26 +17,30 @@ const Dashboard = () => {
 	const [days, setDays] = useState(7);
 	const { currency } = useStateContext();
 
-	const handleDownload = async (period, file) => {
-		// const fileType =
-		// 	"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
-		// const fileExtension = ".xlsx";
-		// const data = period === 7 ? file.weekly_results : file.monthly_results;
-		// const ws = XLSX.utils.json_to_sheet(data);
-		// const wb = { Sheets: { data: ws }, SheetNames: ["data"] };
-		// const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
-		// const excelData = new Blob([excelBuffer], { type: fileType });
-		// FileSaver.saveAs(excelData, "report" + fileExtension);
-	};
-
 	const closeModals = () => {
 		if (currencyModal) {
 			setCurrencyModal(false);
 		}
 	};
 
+	const handleDownload = async (period, file) => {
+		const fileType =
+			"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
+		const fileExtension = ".xlsx";
+
+		const data = period === 7 ? file.weekly_results : file.monthly_results;
+		const ws = XLSX.utils.json_to_sheet(data);
+		const wb = { Sheets: { data: ws }, SheetNames: ["data"] };
+		const excelBuffer = XLSX.write(wb, {
+			bookType: "xlsx",
+			type: "array",
+		});
+		const excelData = new Blob([excelBuffer], { type: fileType });
+		FileSaver.saveAs(excelData, "Report" + fileExtension);
+	};
+
 	const boxStyle =
-		"relative flex flex-col justify-between mb-[1.5rem] sm:mb-[2rem] lg:mb-0 h-[15rem] sm:h-[19rem] xl:h-[20rem] 2xl:h-[28rem] w-[47%] sm:w-[47%] lg:w-[23.5%] border-[1px] border-solid border-[var(--black-base)] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10px] text-[1.2rem] sm:text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.8rem] font-medium p-[1.5rem] sm:p-[2rem] xl:p-[2.2rem] 2xl:p-[3rem]";
+		"relative flex flex-col justify-between mb-[1.5rem] sm:mb-[2rem] lg:mb-0 h-[15rem] sm:h-[19rem] xl:h-[20rem] 2xl:h-[28rem] w-[47%] sm:w-[31%] lg:w-[23.5%] border-[1px] border-solid border-[var(--black-base)] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10px] text-[1.2rem] sm:text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.8rem] font-medium p-[1.5rem] sm:p-[2rem] xl:p-[2.2rem] 2xl:p-[3rem]";
 
 	const salesBox =
 		"h-[21rem] sm:h-[24rem] xl:h-[25rem] 2xl:h-[34rem] border-[1px] border-solid rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10px]";
@@ -55,7 +59,7 @@ const Dashboard = () => {
 					className={`${styles["dashboard-title"]} text-[1.7rem] sm:text-[1.8rem] xl:text-[1.9rem] 2xl:text-[2.5rem]`}>
 					Sales Overview
 				</p>
-				<div className="w-full sm:self-center lg:self-start sm:w-[60%] lg:w-full flex flex-wrap items-center justify-between">
+				<div className="w-full self-start flex flex-wrap items-center justify-between">
 					{data.summary?.length > 0
 						? data.summary.map((item, index) => (
 								<div
@@ -108,10 +112,9 @@ const Dashboard = () => {
 							30 days
 						</p>
 
-						<span
-							onClick={() => setCurrencyModal(true)}
-							className="relative z-[1]">
-							<Button>
+						<span className="relative z-[1]">
+							<Button
+								handleOnClick={() => setCurrencyModal(true)}>
 								{currency}
 								<IoIosArrowDown className={iconSize} />
 							</Button>

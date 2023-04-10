@@ -81,7 +81,7 @@ export const MainChart = ({ data }) => {
 		return null;
 	};
 	return (
-		<div className="absolute bottom-[8%] w-[95%] h-[80%] ">
+		<div className="absolute bottom-[8%] left-[2%] w-[95%] h-[80%] ">
 			<ResponsiveContainer
 				width="100%"
 				height="100%">

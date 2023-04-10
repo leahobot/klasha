@@ -45,13 +45,13 @@ const Pagination = ({ users, currentPage, setCurrentPage, usersPerPage }) => {
 	}
 
 	const PaginatelistClassName =
-		"py-[0.2rem] px-[0.8rem] sm:py-[0.4rem] xl:py-[0.5rem] 2xl:py-[1rem] sm:px-[1rem] xl:px-[1.1rem] 2xl:px-[1.6rem] rounded-full font-semibold";
+		"py-[0.4rem] xl:py-[0.5rem] 2xl:py-[1rem] px-[1.1rem] xl:px-[1.2rem] 2xl:px-[1.9rem] rounded-full font-semibold";
 	const iconBtn =
 		"outline-0 border-0 bg-white text-[var(--gray-base-primary)]  hover:text-[var(--gray-base-secondary)] disabled:text-gray-200";
 
 	return (
-		<footer className="flex justify-end px-[3rem] my-[1.5rem] xl:my-[1.7rem] 2xl:my-[2.5rem] text-[1.2rem] sm:text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.9rem]">
-			<div className="flex items-center gap-4 lg:gap-6 xl:gap-8 2xl:gap-12 cursor-pointer border-solid border-[1px] border-[var(--gray-light-primary)] px-[1rem] py-[0.4rem] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10px]">
+		<footer className="flex justify-end px-[1.5rem] sm:px-[3rem] xl:px-[3.5rem] 2xl:px-[5rem] my-[1.5rem] xl:my-[1.7rem] 2xl:my-[2.5rem] text-[1.3rem] xl:text-[1.4rem] 2xl:text-[1.9rem]">
+			<div className="flex items-center gap-4 lg:gap-6 2xl:gap-10 cursor-pointer border-solid border-[1px] border-[var(--gray-light-primary)] px-[1rem] xl:px-[1.5rem] 2xl:px-[2.5rem] py-[0.4rem] xl:py-[0.5rem] 2xl:py-[0.8rem] rounded-[6px] sm:rounded-[8px] 2xl:rounded-[10px]">
 				{pageNumbers.length > 1 && (
 					<button
 						onClick={paginatePrev}
