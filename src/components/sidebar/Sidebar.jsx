@@ -35,7 +35,7 @@ const Sidebar = () => {
 		<aside
 			className={`${styles.sidebar} ${
 				sidePanel ? "translate-x-0" : "-translate-x-[100%]"
-			} w-[55%] sm:w-[40%] lg:w-[20%] justify-between lg:gap-[15vh] xl:gap-0 xl:justify-between py-[3rem] xl:py-[3.5rem] 2xl:py-[5rem] px-[3rem] sm:px-[4rem] xl:px-[4.5rem] 2xl:px-[5.5rem] z-[2]`}>
+			} w-[55%] sm:w-[40%] lg:w-[20%] justify-between lg:gap-[15vh] xl:gap-0 xl:justify-between py-[3rem] xl:py-[3.5rem] 2xl:py-[5rem] px-[3rem] sm:px-[4rem] xl:px-[4.5rem] 2xl:px-[5.5rem] z-[15]`}>
 			<div>
 				<Link to="">
 					<img

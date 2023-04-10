@@ -1,14 +1,152 @@
 {
 	"summary": [
 		{
-			"todaySales": "1,652.50",
-			"weekSales": "2,652.50",
-			"monthSales": "6,652.50",
-			"prevMonthSales": "10,652.50"
+			"duration": "Today's sales",
+			"amount": "1,652.50",
+			"has_bg": false
+		},
+		{
+			"duration": "This week",
+			"amount": "2,652.50",
+			"period": "24 Aug - 01 Sept 21",
+			"has_bg": true,
+			"sales": [
+				{
+					"date": "20 Aug",
+					"amount": 500
+				},
+				{
+					"date": "21 Aug",
+					"amount": 300
+				},
+				{
+					"date": "22 Aug",
+					"amount": 700
+				},
+				{
+					"date": "23 Aug",
+					"amount": 300
+				},
+				{
+					"date": "24 Aug",
+					"amount": 500
+				},
+				{
+					"date": "25 Aug",
+					"amount": 200
+				},
+				{
+					"date": "26 Aug",
+					"amount": 400
+				}
+			]
+		},
+		{
+			"duration": "This month",
+			"amount": "6,652.50",
+			"period": "01 Sept - 08 Sept 21",
+			"has_bg": false,
+			"sales": [
+				{
+					"date": "14 Sept",
+					"amount": 1500
+				},
+				{
+					"date": "15 Sept",
+					"amount": "1000"
+				},
+				{
+					"date": "16 Sept",
+					"amount": 2400
+				},
+				{
+					"date": "17 Sept",
+					"amount": 1300
+				},
+				{
+					"date": "18 Sept",
+					"amount": 1700
+				},
+				{
+					"date": "19 Sept",
+					"amount": 1000
+				},
+				{
+					"date": "20 Sept",
+					"amount": 2500
+				}
+			]
+		},
+		{
+			"duration": "Last month",
+			"amount": "10,652.50",
+			"period": "09 Sept - 16 Sept 21",
+			"has_bg": false,
+			"sales": [
+				{
+					"date": "14 Sept",
+					"amount": 1000
+				},
+				{
+					"date": "15 Sept",
+					"amount": 2800
+				},
+				{
+					"date": "16 Sept",
+					"amount": 1600
+				},
+				{
+					"date": "17 Sept",
+					"amount": 2400
+				},
+				{
+					"date": "18 Sept",
+					"amount": 1500
+				},
+				{
+					"date": "19 Sept",
+					"amount": 2200
+				},
+				{
+					"date": "20 Sept",
+					"amount": 1500
+				}
+			]
 		}
 	],
 
-	"results": [
+	"weekly_results": [
+		{
+			"date": "20 Aug",
+			"amount": "1500"
+		},
+		{
+			"date": "21 Aug",
+			"amount": "2800"
+		},
+		{
+			"date": "22 Aug",
+			"amount": "1200"
+		},
+		{
+			"date": "23 Aug",
+			"amount": "3000"
+		},
+		{
+			"date": "24 Aug",
+			"amount": "1800"
+		},
+		{
+			"date": "25 Aug",
+			"amount": "2500"
+		},
+		{
+			"date": "26 Aug",
+			"amount": "1700"
+		}
+	],
+
+	"monthly_results": [
 		{
 			"date": "20 Aug",
 			"amount": "1500"
@@ -71,7 +209,7 @@
 		},
 		{
 			"date": "04 Sept",
-			"amount": "4000"
+			"amount": "1200"
 		},
 		{
 			"date": "05 Sept",

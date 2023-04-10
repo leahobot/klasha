@@ -4,21 +4,27 @@ const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
 	const [sidePanel, setSidePanel] = useState(true);
-	const [modal, setModal] = useState(false);
-	const [languageBox, setLanguageBox] = useState(false);
+	const [userModal, setUserModal] = useState(false);
+	const [languageModal, setLanguageModal] = useState(false);
 	const [language, setLanguage] = useState("En");
+	const [currency, setCurrency] = useState("USD");
+	const [searchInput, setSearchInput] = useState("");
 
 	return (
 		<StateContext.Provider
 			value={{
 				sidePanel,
 				setSidePanel,
-				modal,
-				setModal,
-				languageBox,
-				setLanguageBox,
+				userModal,
+				setUserModal,
+				languageModal,
+				setLanguageModal,
 				language,
 				setLanguage,
+				currency,
+				setCurrency,
+				searchInput,
+				setSearchInput,
 			}}>
 			{children}
 		</StateContext.Provider>

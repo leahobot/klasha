@@ -1,1 +1,64 @@
+.dashboard {
+	width: 100%;
 
+	&-title {
+		font-family: GeneralSans-Medium;
+		color: var(--black-secondary);
+	}
+
+	.amount {
+		font-family: GeneralSans-Medium;
+	}
+
+	select {
+		border: 2px solid var(--gray-light-secondary);
+		color: var(--gray-base-secondary);
+		outline: 0;
+		font-weight: 500;
+
+		&:focus {
+			border-color: var(--gray-base);
+		}
+	}
+
+	.lines {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../assets/lines.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		font-family: GeneralSans-Medium;
+	}
+}
+
+.transactions {
+	width: 100%;
+	border: 1px solid var(--gray-primary-light);
+
+	&-title {
+		border-bottom: 1px solid var(--gray-primary-light);
+		font-family: GeneralSans-Medium;
+		color: var(--black-secondary);
+	}
+
+	table {
+		thead {
+			color: var(--gray-secondary);
+			font-family: GeneralSans-Semibold;
+		}
+
+		tbody {
+			tr {
+				border-bottom: 1px solid var(--gray-primary-light);
+
+				&:hover {
+					background-color: var(--gray-light);
+				}
+			}
+		}
+	}
+}

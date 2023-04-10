@@ -9,20 +9,20 @@ import "./fonts/GeneralSans-Bold.woff";
 
 function App() {
 	const {
-		modal,
-		setModal,
-		languageBox,
-		setLanguageBox,
+		userModal,
+		setUserModal,
+		languageModal,
+		setLanguageModal,
 		sidePanel,
 		setSidePanel,
 	} = useStateContext();
 
 	const closeModals = () => {
-		if (modal) {
-			setModal(false);
+		if (userModal) {
+			setUserModal(false);
 		}
-		if (languageBox) {
-			setLanguageBox(false);
+		if (languageModal) {
+			setLanguageModal(false);
 		}
 	};
 	return (
@@ -35,7 +35,7 @@ function App() {
 			{sidePanel && (
 				<div
 					onClick={() => setSidePanel(false)}
-					className="fixed inset-0 w-full h-[100vh] bg-[rgba(239,44,89,0.1)] lg:hidden"
+					className="z-[2] fixed inset-0 w-full h-[100vh] bg-gradient-to-b from-pink-500 to-black opacity-60 lg:hidden"
 				/>
 			)}
 		</div>

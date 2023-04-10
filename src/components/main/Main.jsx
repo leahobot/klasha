@@ -21,7 +21,7 @@ const Main = () => {
 		<Fragment>
 			<Header />
 			<main
-				className={`text-[1.5rem] xl:text-[1.6rem] 2xl:text-[2rem] mt-[15rem] xl:mt-[16rem] 2xl:mt-[22rem] h-full px-[3rem] xl:px-[4rem] 2xl:px-[6rem] overflow-auto ${
+				className={`text-[1.5rem] xl:text-[1.6rem] 2xl:text-[2rem] pt-[10rem] sm:pt-[15rem] pb-[6rem] xl:pt-[16rem] xl:pb-[7rem] 2xl:pt-[22rem] 2xl:pb-[12rem] h-full px-[3rem] xl:px-[4rem] 2xl:px-[6rem] overflow-auto ${
 					sidePanel
 						? "w-full lg:w-[80%] lg:ml-[20%]"
 						: "w-full lg:ml-0"
