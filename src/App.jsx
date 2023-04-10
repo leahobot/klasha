@@ -35,7 +35,7 @@ function App() {
 			{sidePanel && (
 				<div
 					onClick={() => setSidePanel(false)}
-					className="z-[2] fixed inset-0 w-full h-[100vh] bg-gradient-to-b from-pink-500 to-black opacity-60 lg:hidden"
+					className="z-[12] fixed inset-0 w-full h-[100vh] bg-gradient-to-b from-pink-500 to-black opacity-60 lg:hidden"
 				/>
 			)}
 		</div>
